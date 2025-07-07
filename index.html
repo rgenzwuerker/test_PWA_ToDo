@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2c3e50" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Meine ToDo-Liste</title>
+</head>
+<body>
+  <div class="app">
+    <h1>📝 Meine ToDo-Liste</h1>
+    <form id="todo-form">
+      <input type="text" id="new-task" placeholder="Neue Aufgabe..." required />
+      <button type="submit">Hinzufügen</button>
+    </form>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
